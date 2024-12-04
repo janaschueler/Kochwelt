@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beeren-Smoothie</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo_small.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo_small_white.png" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="./css_files/style.css">
+    <link rel="stylesheet" type="text/css" href="./css_files/beeren_smoothie_styles.css">
+</head>
+<body>
+    <section class="atf">
+        <header>
+            <a class="img-position-header-logo d_none_500px" href="./index.html">
+                <img class="kochwelt-logo" src="./assets/img/logo.png" alt="Kochwelt Logo">
+            </a>
+            <a class="img-position-resp-logo d_500px" href="./index.html">
+                <img class="kochwelt-logo-resp" src="./assets/img/logo_small.png" alt="Kochwelt Logo">
+            </a>
+            <nav class="d_none_850px">
+                <a href="./index.html">Start</a>
+                <a href="./recipe_apple_cake.html">Rezept des Tages</a>
+                <a href="./contact.html">Kontakt</a>
+                <a href="./impressum.html">Impressum</a>
+            </nav>
+            <button onclick="toggleRespMenu(); changeIcon(this)" class="burger-menu-button burger-menu-close"></button>
+        </header>
+    </section>
+
+    <div class="resp_menu_box d_850px">
+        <div id="resp_menu" class="resp_menu_closed">
+            <a href="./index.html">Start</a>
+            <a href="./recipe_apple_cake.html">Rezept des Tages</a>
+            <a href="./contact.html">Kontakt</a>
+            <a href="./impressum.html">Impressum</a>
+        </div>
+    </div>
+
+    <main>
+
+        <section class="recipe-header">
+            <div class="recipe-header-container">
+                <h1>Beeren-Smoothie</h1>
+                <img src="./assets/img/berries_smoothie_recipe.jpg" alt="Frischer Apfelkuchen im Ofen">
+                <div class="icon-container">
+                    <div class="icon-and-text">
+                        <img src="./assets/img/icons/clock-regular.svg" alt="Uhr">
+                        10 Min.
+                    </div>
+                    <div class="icon-and-text">
+                        <img src="./assets/img/icons/brain-solid.svg" alt="Gehirn">
+                        simpel
+                    </div>
+                    <div class="icon-and-text">
+                        <img src="./assets/img/icons/calendar-alt-regular.svg" alt="Kalender">
+                        08.10.2024
+                    </div>
+                </div>
+                <div class="displayIcons500px">
+                    <div class="displayIcons500px-box">
+                        <div class="icon-and-text">
+                            <img src="./assets/img/icons/clock-regular.svg" alt="Uhr">
+                            10 Min.
+                        </div>
+                        <div class="icon-and-text">
+                            <img src="./assets/img/icons/brain-solid.svg" alt="Gehirn">
+                            simpel
+                        </div>
+                    </div>
+                    <div class="icon-and-text">
+                        <img src="./assets/img/icons/calendar-alt-regular.svg" alt="Kalender">
+                        08.10.2024
+                    </div>
+                </div>
+            </div>
+            <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+        </section>
+
+        <section class="recipe-ingredients">
+            <div class="seperator-width"></div>
+            <div class="column_1100px">
+                <form onsubmit="calculateRecipe(); showPortion(); namingFunc(); return false">
+                    <div class="text-input-button">
+                        <label for="recipeInput">Zutaten für</label>
+                        <div class="input-and-button">
+                            <input required type="number" min="1" max="48" step="any" value="1" id="recipeInput">
+                            <button type="submit" id="submit">Portionen</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td id="blueberries">40 g</td>
+                        <td>Heidelbeeren</td> 
+                    </tr>
+                    <tr>
+                        <td id="raspberries">85 g</td>
+                        <td>Himbeeren</td> 
+                    </tr>
+                    <tr>
+                        <td id="yogurt">230 g</td>
+                        <td>Naturjoghurt</td> 
+                    </tr>
+                    <tr>
+                        <td id="honey">1 TL</td>
+                        <td>Honig</td> 
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section class="recipe-nutritional-values">
+            <div class="seperator-width"></div>
+                <h2 style="margin-bottom: 8px;">Nährwerte für <span id="numberOfPortions">1</span><span id="portionEnding"> Portion</span></h2>
+                <table class="nutri-table">
+                    <tr>
+                        <th class="td-th-first">kcal</th>
+                        <th class="nutri-td-th">Eiweiß</th>
+                        <th class="nutri-td-th">Fett</th>
+                        <th class="nutri-td-th">Kohlenhydr.</th>
+                    </tr>
+                    <tr>
+                        <td class="td-th-first" id="kcal">223</td>
+                        <td class="nutri-td-th" id="protein">10 g</td>
+                        <td class="nutri-td-th" id="fat">9 g</td>
+                        <td class="nutri-td-th" id="carbs">22 g</td>
+                    </tr>
+                </table>
+        </section>
+
+        <section class="preparation">
+            <div class="seperator-width"></div>
+            <h2 style="margin-bottom: 8px;">Zubereitung</h2>
+            <div class="icon-container">
+                <div class="icon-and-text">
+                    <img src="./assets/img/icons/clock-regular.svg" alt="Uhr">
+                    ca. 10 Min.
+                </div>
+                <div class="icon-and-text">
+                    <img src="./assets/img/icons/clock-regular.svg" alt="Uhr">
+                    Gesamtzeit ca. 10 Minuten
+                </div>
+            </div>
+            <div class="displayIcons500px2">
+                <div class="displayIcons500px-box2">
+                    <div class="icon-and-text2">
+                        <img src="./assets/img/icons/clock-regular.svg" alt="Uhr">
+                        10 Min.
+                    </div>
+                    <div class="icon-and-text2">
+                        <img src="./assets/img/icons/clock-regular.svg" alt="Uhr">
+                        Gesamtzeit ca. 10 Minuten
+                    </div>
+                </div>
+            </div>
+            <p>Geben Sie zunächst die frischen oder tiefgefrorenen Blueberries in einen Mixer und 
+                pürieren Sie sie kurz, bis sie leicht zerkleinert, aber noch stückig sind. 
+                Anschließend fügen Sie die Himbeeren hinzu. Diese können ebenfalls frisch oder 
+                gefroren sein, je nach Verfügbarkeit. Ergänzen Sie den Mix um den Honig – wie viel, 
+                hängt davon ab, wie süß Sie Ihr Getränk mögen. Beginnen Sie mit einem Esslöffel, Sie 
+                können später noch mehr hinzufügen, falls nötig. Schließlich kommt der cremige Joghurt 
+                dazu, der für eine angenehme Konsistenz sorgt und das Getränk sämig macht. Pürieren Sie 
+                nun alle Zutaten miteinander, bis eine feine, gleichmäßige Masse entsteht. Je nach 
+                Vorliebe können Sie die Dauer des Pürierens variieren – wer es gerne etwas stückiger 
+                mag, püriert kürzer, wer einen besonders feinen Smoothie bevorzugt, püriert länger.
+                Sobald die gewünschte Konsistenz erreicht ist, gießen Sie die Mischung in ein großes 
+                Glas. Dieser Smoothie ist perfekt für ein leichtes Frühstück, da er sowohl erfrischend 
+                als auch sättigend ist, oder eignet sich als Snack zwischendurch. Wer es süßer mag, 
+                kann beim Abschmecken nach Bedarf noch etwas mehr Honig oder auch Zucker hinzufügen. 
+                Wenn Sie das Getränk etwas kälter möchten, empfiehlt es sich, die Beeren vorher 
+                einzufrieren oder einige Eiswürfel mit in den Mixer zu geben.
+                Das Rezept ergibt eine Portion, die sich ideal in einem großen Glas servieren lässt. 
+                Möchten Sie mehrere Personen verwöhnen oder größere Mengen vorbereiten, können die 
+                Zutaten einfach verdoppelt oder entsprechend angepasst werden. Guten Appetit!
+            </p>
+            <h4>Rezept erstellt von</h4>
+            <div class="recipe-by">
+                <img src="./assets/img/profile_simon.jpeg" alt="Profilbild">
+                <span>Simon</span>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-container-left">
+                <a class="img-position-logo" href="./index.html">
+                    <img class="kochwelt-logo" src="./assets/img/logo_White.png" alt="Kochwelt Logo">
+                </a>
+                <div class="footer-contact-impressum-usw">
+                    <a class="footer-link" href="./contact.html">
+                        Kontakt
+                    </a>
+                    <a class="footer-link" href="./impressum.html">
+                        Impressum
+                    </a>
+                    <a class="footer-link" href="./datenschutz.html">
+                        Datenschutz
+                    </a>
+                </div>
+            </div>
+            <div class="socialmedia-container">
+                <a class="img-position socialmedia-icon-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                    <img class="socialmedia-icon-img" src="./assets/img/facebook_white.png" alt="Facebook Logo">
+                </a>
+                <a class="img-position socialmedia-icon-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <img class="socialmedia-icon-img" src="./assets/img/instagram_white.png" alt="Instagram Logo">
+                </a>
+                <a class="img-position socialmedia-icon-link" href="https://x.com/home" target="_blank" rel="noopener noreferrer">
+                    <img class="socialmedia-icon-img" src="./assets/img/twitter_white.png" alt="Twitter Logo">
+                </a>
+            </div>
+        </div>  
+    </footer>
+</body>
+
+
+<script src="./script.js"></script>
+<script src="./beeren_smoothie.js"></script>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grüner Smoothie</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo_small.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo_small_white.png" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" type="text/css" href="./css_files/style_2.css" />
+    <link rel="stylesheet" type="text/css" href="./css_files/smoothie_styles.css" />
+    <link rel="stylesheet" href="./assets/fonts/fonts.css">
+ 
+  </head>
+
+  <body>
+    <section class="aot">
+      <header>
+        <a class="logoPosition logoDesktopOnOff" href="./index.html"  ><img class="logo" src="./assets/img/logo.png" alt="Logo Kochwelt" /></a>
+        <a class="logoPosition logoMobileOnOff" href="./index.html"  ><img class="logoMobile" src="./assets/img/logo_small.png" alt="Logo Kochwelt" /></a>
+        <nav>
+          <a class="navLink" href="./index.html"  >Start</a>
+          <a class="navLink" href="./recipe_apple_cake.html"  >Rezept des Tages</a>
+          <a class="navLink" href="./contact.html"  >Kontakt</a>
+          <a class="navLink" href="./impressum.html"  >Impressum</a>
+        </nav>
+        <button onclick="toggleNav(); changeIcon(this)" class="myMenueClose myMenueBurger" title="menu bar icons Menu bar icons created by Alfan Subekti - Flaticon"></button>
+      </header>
+    </section>
+
+    <div class="respMenueBoxContainer d_850px" >
+    <div id="respMenue" class="respMenueBox closedMenueBox">
+      <a class="resp-link" href="./index.html"  >Start</a>
+      <a class="resp-link" href="./recipe_apple_cake.html"  >Rezept des Tages</a>
+      <a class="resp-link" href="./contact.html"  >Kontakt</a>
+      <a class="resp-link" href="./impressum.html"  >Impressum</a>
+    </div>
+  </div>
+
+
+<section class="main">
+  <section class="recipeHead">
+    <h1>Grüner Smoothie</h1>
+    <img class="recipeHeadImg" src="./assets/img/cocktail.jpg" alt="Smoothie Gurke Feldsalat" />
+    <div class="badgesDesktopOnOff">
+    <small class="badges">
+      <span class="singleBadge">
+        <img src="./assets/img/icons/clock-regular.svg" alt="icon Clock" />
+        5 Min.
+      </span>
+      <span class="singleBadge">
+        <img src="./assets/img/icons/brain-solid.svg" alt="icon Brain" />
+        simpel
+      </span>
+      <span class="singleBadge badgeRight">
+        <img src="./assets/img/icons/calendar-alt-regular.svg" alt="icon Calander" />
+        28.09.2024
+      </span>
+    </small>
+  </div>
+
+    <div class="badgesMobileOnOff">
+      <small class="badgesMobile">
+      <div class="badgeUnitOne">
+         <div class="singleBadge">
+           <img src="./assets/img/icons/clock-regular.svg" alt="icon Clock" />
+           5 Min.
+         </div>
+         <div class="singleBadge">
+            <img src="./assets/img/icons/brain-solid.svg" alt="icon Brain" />
+           simpel
+         </div>
+      </div>
+      <div class="badgeUnitTwo">
+       <div class="singleBadge badgeRight">
+         <img src="./assets/img/icons/calendar-alt-regular.svg" alt="icon Calander" />
+         28.09.2024
+        </div>
+       </div>
+    </small>
+   </div>
+  </section>
+  
+    <section class="table">
+         <div class="line"><button onclick="topFunction()" id="myBtn" title="Go to top"></button></div>
+        
+         <form class="inputDet" onsubmit="quantityfunc(); nutrifunc(); portionfunc(); namingfunc(); return false">
+          <label class="lable" for="measurement">Zutaten für </label>
+          <input class="inputLook" type="number" step= any min="1" max="92" id="myInput" value="4">
+          <button type="submit" id="namingButton">Portionen</button>
+          <p id="ifPortionsDisplay" class="d_none"></p>
+        </form>
+        
+        <table class="tableStyl">
+             <tr>
+                <td class="td">150 g</td>
+                <td class="tdRight">Feldsalat</td>
+             </tr>
+             <tr>
+                <td class="td">2 cm</td>
+                <td class="tdRight">Ingwer</td>
+             </tr>
+                <td class="td">2</td>
+                <td class="tdRight">Salatgurke</td>
+             </tr>
+             <tr>
+                <td class="td">1</td>
+                <td class="tdRight">Birne</td>
+             </tr>
+             <tr>
+                <td class="td">1</td>
+                <td class="tdRight">Banane</td>
+             </tr>
+             <tr>
+                <td class="td">1</td>
+                <td class="tdRight">Zitrone</td>
+             </tr>
+             <tr>
+                <td class="td"></td>
+                <td class="tdRight">Agavendicksaft (nach Geschmack)</td>
+             </tr>
+        </table>
+    </section>
+
+<section class="nutritionalValuesContainer"> 
+  <div class="line"></div>
+  <h2 id="portionAmount">Nährwerte für 4 Portionen</h2>
+  <table class="nutritionalTable" >
+    <tr>
+      <th class="tdNutri">kcal</td>
+      <th class="nutriSpace">Eiweiß</td>
+      <th class="nutriSpace">Fett</td>
+      <th class="nutriSpace">Kohlenhydr.</td>
+   </tr>
+    <tr class="grey">
+      <td id="cal" class="tdNutri">200</td>
+      <td id="prot" class="nutriSpace">22 g</td>
+      <td id="fett" class="nutriSpace">6 g</td>
+      <td id="carbs" class="nutriSpace">9 g</td>
+   </tr>
+  </table>
+
+</section>
+    <section class="preperation">
+      <div class="line"></div>
+      <h2>Zubereitung</h2>
+      <div class="badgesDesktopOnOff">
+      <div class="badges">
+         <div class="singleBadge">
+          <img src="./assets/img/icons/clock-regular.svg" alt="icon Clock" />
+          Ca. 5 Min.
+        </div>
+         <div class="singleBadge">
+          <img src="./assets/img/icons/clock-regular.svg" alt="icon Clock" />
+          Gesamtzeit ca. 5 Min.
+         </div>
+      </div>
+    </div>
+    <div class="badgesMobileOnOff">
+      <div class="badgesMobile">
+         <div class="singleBadge">
+          <img src="./assets/img/icons/clock-regular.svg" alt="icon Clock" />
+          Ca. 5 Min.
+        </div>
+         <div class="singleBadge">
+          <img src="./assets/img/icons/clock-regular.svg" alt="icon Clock" />
+          Gesamtzeit ca. 5 Min.
+         </div>
+      </div>
+    </div>
+      <div class="prepCopy"> Den Feldsalat waschen, putzen und gut abtropfen lassen. Den Ingwer schälen und fein hacken. Die Gurke waschen und grob in Stücke schneiden. Die Birne waschen, vierteln und das Kerngehäuse entfernen. Die Banane schälen und in Scheiben schneiden. Den Saft der Zitrone auspressen. Alle vorbereiteten Zutaten zusammen mit dem Agavendicksaft in einem Mixer fein pürieren und nach Bedarf kaltes Wasser hinzufügen, bis die gewünschte Konsistenz erreicht ist. Anschließend in Gläser füllen und servieren.</div>
+    </section>
+
+<section class="copyWriter">
+    <h3>Rezept erstellt von</h3>
+    <div class="copyWriterContainer">
+      <img src="./assets/img/161031_DSC_0114-web.jpeg" alt="Profile image">
+      <p class="copyWriterName">Jana</p>
+    </div>
+</section>
+</section>
+
+<footer>
+  <div id="footer" class="footerConatinaer">
+    <div class="footerContainerLeft">
+      <a class="img-position" href="./index.html"><img class="kochwelt-logo" src="./assets/img/logo_White.png" alt="logo" /></a>
+      <div class="footerNav">
+        <a class="footerLink" href="./impressum.html"  >Impressum</a>
+        <a class="footerLink" href="./datenschutz.html">Datenschutz</a>
+        <a class="footerLink" href="./contact.html"  >Kontakt</a>
+      </div>
+    </div>
+    <div class="footerSocialcontainer">
+      <a class="footerSocialIcons" target="_blank" rel="noopener noreferrer"  href="https://www.facebook.com/?locale=de_DE"><img class="footerSocialIconImg" src="./assets/img/facebook_white.png" alt="Facebook Icons"></a>
+      <a class="footerSocialIcons" target="_blank" rel="noopener noreferrer"  href="https://www.instagram.com/sakuraramen/?hl=de"><img class="footerSocialIconImg" src="./assets/img/twitter_white.png" alt="Twitter Icons"></a>
+      <a class="footerSocialIcons" target="_blank" rel="noopener noreferrer"  href="https://www.instagram.com/"><img class="footerSocialIconImg" src="./assets/img/instagram_white.png" alt="Instagram Icons"></a>
+   </div>
+  </div>
+</footer>
+
+</body>
+
+<script src="./recipie_smoothie.js"></script>
+
+</html>

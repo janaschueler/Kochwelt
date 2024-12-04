@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Der unmögliche Apfelkuchen</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo_small.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo_small_white.png" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="./css_files/style.css">
+    <link rel="stylesheet" type="text/css" href="./css_files/recipe_apple_cake_style.css">
+</head>
+<body>
+    <section class="atf">
+        <header>
+            <a class="img-position-header-logo d_none_500px" href="./index.html">
+                <img class="kochwelt-logo" src="./assets/img/logo.png" alt="Kochwelt Logo">
+            </a>
+            <a class="img-position-resp-logo d_500px" href="./index.html">
+                <img class="kochwelt-logo-resp" src="./assets/img/logo_small.png" alt="Kochwelt Logo">
+            </a>
+            <nav class="d_none_850px">
+                <a href="./index.html">Start</a>
+                <a href="./recipe_apple_cake.html">Rezept des Tages</a>
+                <a href="./contact.html">Kontakt</a>
+                <a href="./impressum.html">Impressum</a>
+            </nav>
+            <button onclick="toggleRespMenu(); changeIcon(this)" class="burger-menu-button burger-menu-close"></button>
+        </header>
+    </section>
+
+    <div class="resp_menu_box d_850px">
+        <div id="resp_menu" class="resp_menu_closed">
+            <a href="./index.html">Start</a>
+            <a href="./recipe_apple_cake.html">Rezept des Tages</a>
+            <a href="./contact.html">Kontakt</a>
+            <a href="./impressum.html">Impressum</a>
+        </div>
+    </div>
+
+    <main>
+
+        <section class="recipe-header">
+            <div class="recipe-header-container">
+                <h1>Unmöglicher Apfelkuchen</h1>
+                <img src="./assets/img/apple_cake_2.jpg" alt="Frischer Apfelkuchen im Ofen">
+                <div class="icon-container">
+                    <div class="icon-and-text">
+                        <img src="./assets/img/icons/clock-regular.svg" alt="Uhr">
+                        50 Min.
+                    </div>
+                    <div class="icon-and-text">
+                        <img src="./assets/img/icons/brain-solid.svg" alt="Gehirn">
+                        simpel
+                    </div>
+                    <div class="icon-and-text">
+                        <img src="./assets/img/icons/calendar-alt-regular.svg" alt="Kalender">
+                        27.09.2024
+                    </div>
+                </div>
+                <div class="displayIcons500px">
+                    <div class="displayIcons500px-box">
+                        <div class="icon-and-text">
+                            <img src="./assets/img/icons/clock-regular.svg" alt="Uhr">
+                            50 Min.
+                        </div>
+                        <div class="icon-and-text">
+                            <img src="./assets/img/icons/brain-solid.svg" alt="Gehirn">
+                            simpel
+                        </div>
+                    </div>
+                    <div class="icon-and-text">
+                        <img src="./assets/img/icons/calendar-alt-regular.svg" alt="Kalender">
+                        27.09.2024
+                    </div>
+                </div>
+            </div>
+            <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+        </section>
+
+        <section class="recipe-ingredients">
+            <div class="seperator-width"></div>
+            <form onsubmit="calculateRecipe(); showPortion(); namingFunc(); return false">
+                <div class="text-input-button">
+                    <label for="recipeInput">Zutaten für</label>
+                    <div class="input-and-button">
+                        <input required type="number" min="1" max="48" step="any" value="12" id="recipeInput">
+                        <button type="submit" id="submit">Portionen</button>
+                    </div>
+                </div>
+            </form>
+            <div>
+                <table>
+                    <tr>
+                        <td id="cream">2</td>
+                        <td>Becher Schlagsahne</td> 
+                    </tr>
+                    <tr>
+                        <td id="sugar1">150 g</td>
+                        <td>Zucker</td> 
+                    </tr>
+                    <tr>
+                        <td id="vanilleSugar">1 Pck.</td>
+                        <td>Vanillezucker</td> 
+                    </tr>
+                    <tr>
+                        <td id="lemon">1</td>
+                        <td>Zitrone(n), abgeriebene Schale davon</td> 
+                    </tr>
+                    <tr>
+                        <td id="eggs">5</td>
+                        <td>Ei(er)</td> 
+                    </tr>
+                    <tr>
+                        <td id="flour">375 g</td>
+                        <td>Mehl</td> 
+                    </tr>
+                    <tr>
+                        <td id="bakingPowder">1 Pck.</td>
+                        <td>Backpulver</td> 
+                    </tr>
+                </table>
+                <h3>Für den Belag:</h3>
+                <table>
+                    <tr>
+                        <td id="apples">1,25 kg</td>
+                        <td>Äpfle, säuerliche</td> 
+                    </tr>
+                    <tr>
+                        <td id="lemonJuice">4 EL</td>
+                        <td>Zitronensaft</td> 
+                    </tr>
+                </table>
+                <h3>Für den Guss:</h3>
+                <table>
+                    <tr>
+                        <td id="butter">100 g</td>
+                        <td>Butter</td> 
+                    </tr>
+                    <tr>
+                        <td id="sugar2">100 g</td>
+                        <td>Zucker</td> 
+                    </tr>
+                    <tr>
+                        <td id="milk">4 EL</td>
+                        <td>Milch</td> 
+                    </tr>
+                    <tr>
+                        <td id="almonds">60 g</td>
+                        <td>Mandel(n) (Blättchen)</td> 
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section class="recipe-nutritional-values">
+            <div class="seperator-width"></div>
+                <h2 style="margin-bottom: 8px;">Nährwerte für <span id="numberOfPortions">12</span><span id="portionEnding"> Portionen</span></h2>
+                <table class="nutri-table">
+                    <tr>
+                        <th class="td-th-first">kcal</th>
+                        <th class="nutri-td-th">Eiweiß</th>
+                        <th class="nutri-td-th">Fett</th>
+                        <th class="nutri-td-th">Kohlenhydr.</th>
+                    </tr>
+                    <tr>
+                        <td class="td-th-first" id="kcal">5844</td>
+                        <td class="nutri-td-th" id="protein">108 g</td>
+                        <td class="nutri-td-th" id="fat">276 g</td>
+                        <td class="nutri-td-th" id="carbs">744 g</td>
+                    </tr>
+                </table>
+        </section>
+
+        <section class="preparation">
+            <div class="seperator-width"></div>
+            <h2 style="margin-bottom: 8px;">Zubereitung</h2>
+            <div class="icon-container">
+                <div class="icon-and-text">
+                    <img src="./assets/img/icons/clock-regular.svg" alt="Uhr">
+                    ca. 50 Min.
+                </div>
+                <div class="icon-and-text">
+                    <img src="./assets/img/icons/clock-regular.svg" alt="Uhr">
+                    Gesamtzeit ca. 50 Minuten
+                </div>
+            </div>
+            <div class="displayIcons500px2">
+                <div class="displayIcons500px-box2">
+                    <div class="icon-and-text2">
+                        <img src="./assets/img/icons/clock-regular.svg" alt="Uhr">
+                        50 Min.
+                    </div>
+                    <div class="icon-and-text2">
+                        <img src="./assets/img/icons/clock-regular.svg" alt="Uhr">
+                        Gesamtzeit ca. 50 Minuten
+                    </div>
+                </div>
+            </div>
+            <p>Die Äpfel schälen, vierteln, entkernen und längs in Spalten schneiden. Anschließend die Apfelspalten
+                mit dem Zitronensaft vermengen. In einer Rührschüssel die Sahne einfüllen. Zucker, Vanillinzucker und 
+                die abgeriebene Zitronenschale zur Sahne geben und alles halb steif schlagen. Die Eier nacheinander unter 
+                die Mischung rühren. Mehl und Backpulver sieben und kurz unterrühren, bis alles gut vermischt ist. Den 
+                Teig gleichmäßig in eine gefettete Saftpfanne streichen und mit den Apfelspalten belegen. Den Kuchen im 
+                vorgeheizten Ofen bei 200 Grad auf der zweiten Schiene von unten für 15 Minuten backen. Während der 
+                Kuchen backt, das Fett, den Zucker und die Milch in einem Topf aufkochen. Die Mandeln hinzufügen und 
+                gut untermischen. Nach den ersten 15 Minuten den Guss punktuell über den Kuchen verteilen und den 
+                Kuchen für weitere 15 Minuten auf der zweiten Schiene von oben backen.
+            </p>
+            <h4>Rezept erstellt von</h4>
+            <div class="recipe-by">
+                <img src="./assets/img/profile_simon.jpeg" alt="Profilbild">
+                <span>Simon</span>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-container-left">
+                <a class="img-position-logo" href="./index.html">
+                    <img class="kochwelt-logo" src="./assets/img/logo_White.png" alt="Kochwelt Logo">
+                </a>
+                <div class="footer-contact-impressum-usw">
+                    <a class="footer-link" href="./contact.html">
+                        Kontakt
+                    </a>
+                    <a class="footer-link" href="./impressum.html">
+                        Impressum
+                    </a>
+                    <a class="footer-link" href="./datenschutz.html">
+                        Datenschutz
+                    </a>
+                </div>
+            </div>
+            <div class="socialmedia-container">
+                <a class="img-position socialmedia-icon-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                    <img class="socialmedia-icon-img" src="./assets/img/facebook_white.png" alt="Facebook Logo">
+                </a>
+                <a class="img-position socialmedia-icon-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <img class="socialmedia-icon-img" src="./assets/img/instagram_white.png" alt="Instagram Logo">
+                </a>
+                <a class="img-position socialmedia-icon-link" href="https://x.com/home" target="_blank" rel="noopener noreferrer">
+                    <img class="socialmedia-icon-img" src="./assets/img/twitter_white.png" alt="Twitter Logo">
+                </a>
+            </div>
+        </div>  
+    </footer>
+</body>
+
+
+<script src="./script.js"></script>
+<script src="./recipe_apple_cake.js"></script>
+
+</html>

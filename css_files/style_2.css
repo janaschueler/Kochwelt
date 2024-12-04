@@ -1,0 +1,457 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Raleway";
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-size: 16px;
+  color: black;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 550;
+  font-size: 32px;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 550;
+  font-size: 24px;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 32px;
+}
+
+h3 {
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 550;
+  font-size: 20px;
+}
+
+p {
+  color: rgba(0, 0, 0, 0, 0.7);
+}
+
+main {
+  flex: 1;
+}
+
+.aot {
+  background: white;
+  box-shadow: 1px -3px 10px 0px #aaa;
+  padding-bottom: 8px;
+}
+
+header {
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  width: min(100%, 1440px);
+  margin-inline: auto;
+  padding-inline: clamp(16px, 12vw, 160px);
+}
+
+.logo {
+  height: 64px;
+  width: auto;
+}
+.logoPosition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+}
+
+.logoPosition:hover {
+  cursor: pointer;
+}
+
+.logoMobileOnOff {
+  display: none;
+}
+
+nav {
+  font-size: 18px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 16px;
+}
+.navLink {
+  color: black;
+  text-decoration: none;
+}
+.navLink:hover {
+  color: rgb(40, 128, 0);
+  text-decoration: solid underline 4px;
+  text-underline-offset: 8px;
+  cursor: pointer;
+}
+
+button {
+  background-color: rgb(40, 128, 0);
+  color: white;
+  text-decoration: none;
+  padding: 12px 56px;
+  border-width: 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(50, 153, 2);
+}
+
+.todaysRecipe {
+  padding-inline: clamp(16px, 12vw, 160px);
+  margin-top: 60px;
+  width: min(100%, 1440px);
+  margin-inline: auto;
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+}
+
+.todaysRecipe img {
+  height: 256px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+}
+
+.todaysRecipeContent {
+  margin-block-end: 32px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.newRecipies {
+  background-color: rgba(239, 239, 239);
+  padding: 32px 0px;
+  margin-top: 60px;
+}
+
+.newRecipies img {
+  width: 232px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.newRecepiesContainer {
+  width: min(100%, 1440px);
+  margin-inline: auto;
+  padding-inline: clamp(16px, 12vw, 160px);
+  text-align: center;
+}
+
+.newRecepiesImageContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.newRecepiesunit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.newRecepiesunit img {
+  border-radius: 8px;
+  height: 232px;
+  width: 232px;
+  object-fit: cover;
+}
+.link {
+  color: black;
+  text-decoration: none;
+}
+
+.newRecepiesunitLink {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  margin-inline: 0px 0px 0px 0px;
+}
+
+.newRecepiesunitLink:hover {
+  color: rgb(40, 128, 0);
+  text-decoration: none;
+}
+
+.Contentpiece {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 60px 0px;
+  margin-bottom: 48px;
+}
+.ContenpieceContainer {
+  width: min(100%, 1440px);
+  margin-inline: auto;
+  padding-inline: clamp(16px, 12vw, 160px);
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.ContenpieceContainer img {
+  border-radius: 8px;
+  height: 232px;
+  width: 232px;
+  object-fit: cover;
+}
+footer {
+  background-color: rgb(35, 35, 35);
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 0;
+}
+.footerConatinaer {
+  width: min(100%, 1440px);
+  margin-inline: auto;
+  padding-inline: clamp(16px, 12vw, 160px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerContainerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.footerNav {
+  display: flex;
+  gap: 32px;
+}
+
+.footerLink {
+  color: white;
+  text-decoration: none;
+}
+
+.footerLink:hover {
+  color: rgb(40, 128, 0);
+}
+
+.kochwelt-logo {
+  height: 64px;
+  width: auto;
+}
+.kochwelt-logo:hover {
+  height: 64px;
+  width: auto;
+  filter: drop-shadow(0 0 0.9rem rgb(40, 128, 0));
+}
+
+.footerSocialcontainer {
+  display: flex;
+  gap: 24px;
+}
+
+.footerSocialIcons {
+  display: flex;
+  gap: 24px;
+}
+.footerSocialIconImg {
+  height: 32px;
+  width: auto;
+}
+
+.footerSocialIconImg:hover {
+  height: 32px;
+  width: auto;
+  filter: drop-shadow(0 0 0.9rem rgb(40, 128, 0));
+  text-decoration: underline;
+}
+
+.img-position {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 280px;
+  right: 30px; /* Place the button 30px from the right */
+  background-color: #bbb;
+  cursor: pointer;
+  padding: 20px 20px;
+  background-image: url("../assets/img/arrow-upward.svg");
+  background-size: contain;
+  border-radius: 50%;
+  width: 0;
+}
+
+#myBtn:hover {
+  background-color: rgba(
+    239,
+    239,
+    239
+  ); /* Add a dark-grey background on hover */
+}
+
+.myMenueBurger {
+  display: none;
+  position: relative;
+  align-self: flex-end;
+  top: 0px;
+  background-color: rgba(239, 239, 239);
+  cursor: pointer;
+  padding: 24px 24px;
+  background-image: url("../assets/img/icons/close.png");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  width: 0;
+}
+
+.myMenueBurger:hover {
+  background-color: rgb(216, 212, 212);
+}
+
+.myMenueClose {
+  display: none;
+  position: relative;
+  align-self: flex-end;
+  top: 0px;
+  background-color: rgba(239, 239, 239);
+  cursor: pointer;
+  padding: 24px 24px;
+  background-image: url("../assets/img/icons/menu-bar.png");
+  background-size: contain;
+  border-radius: 50%;
+  width: 0;
+}
+
+.myMenueClose:hover {
+  background-color: rgb(216, 212, 212);
+}
+
+.d_850px {
+  display: none;
+}
+
+.respMenueBoxContainer {
+  position: absolute;
+  overflow-x: hidden;
+  right: 0;
+  top: 88px;
+}
+
+.respMenueBox {
+  justify-content: flex-end;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(239, 239, 239);
+  border-radius: 0px 0px 8px 8px;
+  text-align: right;
+  width: min(100%, 1440px);
+  margin-inline: auto;
+  padding: 16px 0px;
+  padding-inline: clamp(16px, 12vw, 160px);
+  right: 0px;
+  transition: all 125ms ease-in-out;
+}
+.closedMenueBox {
+  transform: translateX(100%);
+}
+
+.resp-link,
+resp-link:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.resp-link:hover,
+resp-link:active {
+  color: rgb(40, 128, 0);
+  cursor: pointer;
+}
+
+/* Media query for medium screens */
+@media (max-width: 850px) {
+  .d_850px {
+    display: flex;
+  }
+
+  /* Show the burger menu icon */
+  .myMenueBurger {
+    display: inline-block;
+  }
+
+  .myMenueClose {
+    display: inline-block;
+  }
+
+  /* Hide the navigation menu */
+  nav {
+    display: none;
+  }
+
+  /* Styles for the burger menu icon when clicked */
+  .burger-icon.clicked {
+    background-color: (239, 239, 239);
+  }
+}
+
+@media (max-width: 500px) {
+  .recipeHead {
+    align-items: left;
+  }
+  footer {
+    padding: 40px 0;
+  }
+
+  .footerConatinaer {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footerContainerLeft {
+    align-items: center;
+    justify-content: center;
+  }
+  .logoDesktopOnOff {
+    display: none;
+  }
+  .logoMobileOnOff {
+    display: flex;
+  }
+  .logoMobile {
+    height: 56px;
+    width: auto;
+  }
+}

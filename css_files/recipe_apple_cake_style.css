@@ -1,0 +1,366 @@
+h1 {
+    font-weight: 550;
+    font-size: 32px;
+    margin: 0;
+}
+
+h4 {
+    font-weight: 550;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+
+.recipe-header {
+    margin: 60px 0px;
+}
+
+.recipe-header-container {
+    width: min(100%, 1440px);
+    margin-inline: auto;
+    padding-inline: clamp(16px, 12vw, 160px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.recipe-header-container img {
+    height: 256px;
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: 100% 14%;
+    overflow: hidden;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.icon-container img {
+    height: 16px;
+    width: 16px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+}
+
+.icon-and-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(239, 239, 239);
+    padding: 4px 12px;
+    border-radius: 8px;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 16px;
+}
+
+.displayIcons500px {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    display: none;
+
+}
+
+.displayIcons500px img {
+    height: 16px;
+    width: 16px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+}
+
+.displayIcons500px-box {
+    display: flex;
+    gap: 24px;
+}
+
+.recipe-ingredients {
+    width: min(100%, 1440px);
+    margin-inline: auto;
+    padding-inline: clamp(16px, 12vw, 160px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 60px;
+}
+
+.seperator-width {
+    height: 1px;
+    width: 100%;
+    background-color: rgba(239, 239, 239);
+}
+
+.column_1100px {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.text-input-button {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.d_none {
+    display: none;
+}
+
+.input-and-button {
+    display: flex;
+    align-items: center;
+}
+
+label {
+    color: rgba(0, 0, 0, 0.7);
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+#recipeInput {
+    padding: 10px 54px 10px 0px;
+    font-size: 16px;
+    border: solid rgba(239, 239, 239) 2px;
+    border-radius: 8px 0px 0px 8px;
+    color: rgba(0, 0, 0, 0.7);
+    border-right-width: 0;
+}
+
+#submit {
+    background-color: rgb(40, 128, 0);
+    color: white;
+    text-decoration: none;
+    padding: 12px 56px;
+    border-width: 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: rgb(50, 153, 2); 
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+td {
+    padding: 12px 0px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+td:nth-child(odd) {
+    text-align: center;
+    width: 16%;
+    border-radius: 8px 0px 0px 8px;
+}
+
+td:nth-child(even) {
+    border-radius: 0px 8px 8px 0px;
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(239, 239, 239);
+}
+
+.recipe-nutritional-values {
+    width: min(100%, 1440px);
+    margin-inline: auto;
+    padding-inline: clamp(16px, 12vw, 160px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 60px;
+}
+
+.nutri-table {
+    background-color: white;
+    border-collapse: collapse;
+    border-color: rgb(239, 239, 239);
+    display: table;
+    width: 40%;
+}
+
+table tr th {
+    background-color: white;
+    font-weight: 550;
+    border: 1px solid rgb(239, 239, 239);
+}
+
+.td-th-first {
+    text-align: left !important;
+    width: 0% !important;
+    padding: 4px 24px 4px 0px;
+}
+
+.nutri-td-th {
+    background-color: white;
+    border: 1px solid rgb(239, 239, 239);
+    text-align: center;
+    width: 0% !important;
+    padding: 4px 24px 4px 24px;
+}
+
+table tr:first-child th {
+    border-top: 0;
+}
+
+table tr:last-child td {
+    border-bottom: 0;
+}
+
+table tr td:first-child,
+table tr th:first-child {
+    border-left: 0;
+}
+
+table tr td:last-child,
+table tr th:last-child {
+    border-right: 0;
+}
+
+table tr:first-child th {
+    border-bottom: 0;
+}
+
+table tr:last-child td {
+    border-top: 0;
+}
+
+.preparation {
+    width: min(100%, 1440px);
+    margin-inline: auto;
+    padding-inline: clamp(16px, 12vw, 160px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 120px;
+}
+
+.displayIcons500px2 {
+    display: none;
+}
+
+.displayIcons500px2 img {
+    height: 16px;
+    width: 16px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+}
+
+.displayIcons500px-box2 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.icon-and-text2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(239, 239, 239);
+    padding: 4px 12px;
+    border-radius: 8px;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 16px;
+}
+
+.recipe-by {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.recipe-by img {
+    height: 96px;
+    width: 96px;
+    object-fit: cover;
+    border-radius: 64px;
+    object-position: center;
+}
+
+.recipe-by span {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+@media(max-width: 1100px) {
+    .column_1100px {
+        flex-direction: column;
+        gap: 0px;
+    }
+}
+
+@media(max-width: 700px) {
+    label {
+        text-align: center;
+    }
+
+    .input-and-button {
+        width: 100%;
+    }
+
+    #recipeInput {
+        width: 100%;
+        padding: 10px 0px;
+    }
+
+    #submit {
+        width: 100%;
+        padding: 12px 8px;
+    }
+
+    td:nth-child(odd) {
+        width: 24%;
+    }
+}
+
+@media(max-width: 500px) {
+    h1, h2 , h3, h4, p {
+        text-align: left;
+    }
+
+    .recipe-header-container img {
+        object-position: 57% 100%;
+    }
+
+    .icon-container {
+        display: none;
+    }
+
+    .displayIcons500px {
+        display: flex;
+    }
+
+    .displayIcons500px2 {
+        display: flex;
+    }
+
+
+
+    td:nth-child(odd) {
+        width: 32%;
+    }
+
+    .td-th-first {
+        text-align: center !important;
+        padding: 4px 8px 4px 0px;
+    }
+
+    .nutri-td-th {
+        padding: 4px 8px 4px 8px;
+    }
+    
+}

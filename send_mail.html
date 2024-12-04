@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail gesendet</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo_small.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo_small_white.png" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="./css_files/style.css">
+    <link rel="stylesheet" type="text/css" href="./css_files/send_mail_styles.css">
+</head>
+<body>
+    <section class="atf">
+        <header>
+            <a class="img-position-header-logo d_none_500px" href="./index.html">
+                <img class="kochwelt-logo" src="./assets/img/logo.png" alt="Kochwelt Logo">
+            </a>
+            <a class="img-position-resp-logo d_500px" href="./index.html">
+                <img class="kochwelt-logo-resp" src="./assets/img/logo_small.png" alt="Kochwelt Logo">
+            </a>
+            <nav class="d_none_850px">
+                <a href="./index.html">Start</a>
+                <a href="./recipe_apple_cake.html">Rezept des Tages</a>
+                <a href="./contact.html">Kontakt</a>
+                <a href="./impressum.html">Impressum</a>
+            </nav>
+            <button onclick="toggleRespMenu(); changeIcon(this)" class="burger-menu-button burger-menu-close"></button>
+        </header>
+    </section>
+
+    <div class="resp_menu_box d_850px">
+        <div id="resp_menu" class="resp_menu_closed">
+            <a href="./index.html">Start</a>
+            <a href="./recipe_apple_cake.html">Rezept des Tages</a>
+            <a href="./contact.html">Kontakt</a>
+            <a href="./impressum.html">Impressum</a>
+        </div>
+    </div>
+
+    <main>
+
+        <section class="send-mail">
+            <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+            <div class="send-mail-container">
+                <h1 style="margin-bottom: 8px;">Mail gesendet!</h1>
+                <p>Vielen Dank für Ihre Nachricht!</p>
+                <p>Wir freuen uns über Ihr Feedback und wollen so mit Ihnen gemeinsam unsere Internetseite stetig verbessern.</p>
+                <p>Weitere Informationen finden Sie auf unserer <a href="./index.html" target="_blank" rel="noopener noreferrer">Webseite.</a></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-container-left">
+                <a class="img-position-logo" href="./index.html">
+                    <img class="kochwelt-logo" src="./assets/img/logo_White.png" alt="Kochwelt Logo">
+                </a>
+                <div class="footer-contact-impressum-usw">
+                    <a class="footer-link" href="./contact.html">
+                        Kontakt
+                    </a>
+                    <a class="footer-link" href="./impressum.html">
+                        Impressum
+                    </a>
+                    <a class="footer-link" href="./datenschutz.html">
+                        Datenschutz
+                    </a>
+                </div>
+            </div>
+            <div class="socialmedia-container">
+                <a class="img-position socialmedia-icon-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                    <img class="socialmedia-icon-img" src="./assets/img/facebook_white.png" alt="Facebook Logo">
+                </a>
+                <a class="img-position socialmedia-icon-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <img class="socialmedia-icon-img" src="./assets/img/instagram_white.png" alt="Instagram Logo">
+                </a>
+                <a class="img-position socialmedia-icon-link" href="https://x.com/home" target="_blank" rel="noopener noreferrer">
+                    <img class="socialmedia-icon-img" src="./assets/img/twitter_white.png" alt="Twitter Logo">
+                </a>
+            </div>
+        </div>  
+    </footer>
+</body>
+
+<script src="./script.js"></script>
+
+</html>
